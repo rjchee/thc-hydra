@@ -539,8 +539,8 @@ indicates authentication with integrity protection and encryption.
                        type, webtarget, webport, miscptr, webtarget, preplogin, realm, buffer, nonce, algo, miscptr, header);
             else
               snprintf(result, 500,
-                       "%s %s HTTP/1.0\r\nHost: %s\r\nAuthorization: Digest username=\"%s\", realm=\"%s\", response=\"%s\", nonce=\"%s\", cnonce=\"hydra\", nc=00000001, algorithm=%s, qop=auth, uri=\"%s\"\r\nUser-Agent: Mozilla/4.0 (Hydra)\r\nConnection: keep-alive\r\n%s\r\n",
-                       type, miscptr, webtarget, preplogin, realm, buffer, nonce, algo, miscptr, header);
+                       "%s %s HTTP/1.0\r\nHost: %s\r\nAuthorization: Digest username=\"%s\", realm=\"%s\", response=\"%s\", nonce=\"%s\", cnonce=\"hydra\", nc=00000001, qop=auth, uri=\"%s\"\r\nUser-Agent: Mozilla/4.0 (Hydra)\r\nConnection: keep-alive\r\n%s\r\n",
+                       type, miscptr, webtarget, preplogin, realm, buffer, nonce, miscptr, header);
           }
         }
       }
